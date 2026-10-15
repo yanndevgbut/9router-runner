@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["nodejs_22", "curl"]
+
+[phases.build]
+cmds = ["npm ci || npm install --omit=dev"]
+
+[start]
+cmd = "node index.js"
